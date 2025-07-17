@@ -1,8 +1,9 @@
 import telebot
 import os
 
-TOKEN = os.environ.get("7565761796:AAG4SZag_ZLTIxKxICRXhTyBuKwUY-y78yM")
-bot = telebot.TeleBot(7565761796:AAG4SZag_ZLTIxKxICRXhTyBuKwUY-y78yM)
+TOKEN = os.environ.get("BOT_TOKEN")
+bot = telebot.TeleBot(TOKEN)
+
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     bot.reply_to(message, "Привет! Я гадалка-бот!")
